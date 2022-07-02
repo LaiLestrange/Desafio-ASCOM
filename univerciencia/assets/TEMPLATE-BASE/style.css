@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;500&display=swap');
+
+:root {
+  --font-family-lato: 'Lato', sans-serif;
+  --font-family-oswald: 'Oswald', sans-serif;
+
+  --color-main: rgba(16, 150, 135, 255);
+  --color-darker: rgba(49, 113, 113, 255);
+  --color-lighter: rgba(140, 231, 213, 255);
+  --color-lighter-alt: rgba(0, 191, 167, 255);
+  --color-shadow: #000;
+  --color-seasons: rgba(244, 244, 244, 255);
+  --color-clear: #fff;
+  --color-grey: rgba(172, 172, 172, 255);
+  --color-title: rgba(0, 171, 137, 255);
+  --color-description: rgba(66, 66, 66, 255);
+
+  --background-header: url('img/background-header.png');
+  --background-estilizado: url('img/background-content.png');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: boder-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: var(--font-family-lato);
+}
+
+/* customizando a header */
+header > * {
+  text-transform: uppercase;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: var(--color-darker);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.header-name {
+  background-image: var(--background-header);
+  background-size: cover;
+  color: var(--color-clear);
+  line-height: 15rem;
+}
+
+.color-navbar {
+  background-color: var(--color-darker);
+  transform: translateY(-8px);
+}
+
+.navbar {
+  line-height: 1;
+  z-index: 1;
+}
+
+.nav-link > * {
+  color: var(--color-clear);
+  margin: 0 30px;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-clear);
+}
+.active {
+  position: relative;
+}
+.active::after {
+  content: '';
+  background-color: #ffb900;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  display: block;
+  bottom: -9px;
+  left: 0px;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  color: var(--color-clear);
+}
+
+/* seção do meio: episódios atuais e mais recentes */
+
+/* a imagem de fundo */
+.episodios-atuais {
+  background-color: var(--color-lighter);
+}
+
+.background-estilizado {
+  z-index: -1;
+  transform: translateY(-20px);
+  max-height: 500px;
+  width: 100%;
+  box-shadow: 0px 5px 15px -5px var(--color-shadow);
+}
+
+/* o video */
+
+.episodio-video {
+  z-index: 15;
+  width: 900px;
+  height: 550px;
+
+  text-align: center;
+
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  box-shadow: 0px 10px 20px -5px var(--color-shadow);
+  border: 5px solid var(--color-clear);
+}
+
+/* outros episódios */
+
+.episodios-anteriores {
+  padding-top: 10rem;
+}
+
+.episodios-anteriores-titulo {
+  margin-bottom: 5rem;
+}
+
+/* cards dos episódios */
+
+.episodio-card {
+  display: flex;
+}
+
+.thumbnail-card {
+  height: 150px;
+  border: 5px solid var(--color-clear);
+  margin-right: 10px;
+}
+.card-infos {
+  margin-left: 10px;
+  padding: 5px;
+  text-align: left;
+}
+
+.card-infos > p {
+  margin: 0;
+}
+
+.data-episodio,
+.titulo-episodio {
+  font-family: var(--font-family-oswald);
+}
+
+.data-episodio {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.titulo-episodio {
+  color: var(--color-title);
+  font-size: 25px;
+}
+
+.descricao-episodio {
+  font-size: 18px;
+  color: var(--color-description);
+  margin: 0;
+  overflow: hidden;
+}
+
+/* botões das temporadas */
+.temporadas-anteriores {
+  background-color: var(--color-seasons);
+  padding-top: 10rem;
+  box-shadow: 0px 10px 15px -5px var(--color-shadow);
+}
+
+.temporadas-anteriores-titulo {
+  margin-bottom: 5rem;
+}
+
+.temporadas-anteriores-titulo > h3 {
+  color: var(--color-lighter-alt);
+}
+
+.temp-btn {
+  font-family: var(--font-family-oswald);
+  border: none;
+  background-color: var(--color-grey);
+  font-size: 25px;
+  color: var(--color-clear);
+  text-transform: uppercase;
+  padding: 35px 100px;
+  margin: 0 10px;
+}
+/* paginação */
+
+.pagination {
+  margin-top: 5px;
+}
+
+.pagination-ep > span {
+  background-color: var(--color-clear);
+}
+
+.pagination-temp > span {
+  background-color: var(--color-darker);
+}
+
+.page1,
+.page2,
+.page3 {
+  border-radius: 5px;
+  height: 8px;
+  margin: 0 5px;
+}
+
+.page1 {
+  width: 75px;
+}
+.page2 {
+  width: 25px;
+}
+.page3 {
+  width: 15px;
+}
+
+.mais-episodios,
+.mais-temporadas {
+  text-align: center;
+  font-size: 75px;
+  color: var(--color-darker);
+  padding: 70px 0 100px;
+}
+
+/* footer */
+footer {
+  padding-top: 20px;
+  position: relative;
+  z-index: -1;
+  background-color: var(--color-darker);
+}
+
+/*social media*/
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px calc(15%);
+}
+
+.sm-icon {
+  margin: auto;
+  padding: 10px;
+}
+
+.sm-img {
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
+.social-media > a {
+  text-decoration: none;
+}
+
+/* assinatura */
+.assinatura {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-clear);
+  padding: 20px 0;
+  height: 300px;
+}
+
+.assinatura-copyright {
+  text-align: left;
+}
+.assinatura-p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.assinatura-img {
+  height: 200px;
+  margin: 50px;
+}
+.assinatura-orgaos {
+  display: flex;
+  width: calc(30%);
+  align-items: center;
+  justify-content: center;
+}
+
+.assinatura-uesb,
+.assinatura-gov {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.assinatura-uesb-simbolo,
+.assinatura-uesb-nome {
+  width: 150px;
+  height: auto;
+}
+.assinatura-gov-bahia {
+  width: 100%;
+  height: 200px;
+}
